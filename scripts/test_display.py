@@ -25,6 +25,3 @@ class TestDisplay:
         self.page.display.click_search()
         self.page.search.input_search(value)
         self.page.search.click_back()
-
-    def test_01(self):
-        pass
