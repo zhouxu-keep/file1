@@ -13,6 +13,12 @@ class TestDisplay:
     def teardown(self):
         self.driver.quit()
 
+    @pytest.allure.severity(pytest.allure.severity_level.BLOCKER)
+    # BLOCKER最严重
+    # CRITICAL严重
+    # NORMAL普通
+    # MINOR不不严重
+    # TRIVIAL最不不严重
     @pytest.mark.parametrize("args", analyze_data("search", "test_search"))
     def test_search(self, args):
         value = args["value"]
